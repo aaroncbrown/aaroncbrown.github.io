@@ -19,6 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+      Testing 1, 2, 3...
     </div>
   );
 }
