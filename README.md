@@ -49,7 +49,7 @@ Builds the project.
 
 ### `npm run deploy`
 
-This will automatically run `npm run predeploy` and then pushes the contents to the `gh-pages` branch.  The `gh-pages` branch is used for the content of the portfolio site.
+This will automatically run `npm run predeploy` and then pushes the contents to the `gh-pages` branch.  The `gh-pages` branch is used as the basis for the portfolio site.
 
 ## Learn More
 
