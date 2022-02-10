@@ -2,7 +2,7 @@
 
 This project holds the code for Aaron Brown's portfolio.  To see the porfolio site go to [https://aaroncbrown.github.io/](https://aaroncbrown.github.io/).
 
-# Dependencies
+# Dependencies / Tools
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the TypeScript template.
 
