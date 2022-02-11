@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.5343214e.css","mappings":"AAAA,KACE,6BAAiC,CACjC,QACF,CCHA,SAGI,yBADA,YADA,UAEA","sources":["index.css","components/TopBar/top-bar.scss"],"sourcesContent":["body {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n}",".top-bar {\r\n    width: 100%;\r\n    height: 70px;\r\n    background-color: #15023a;\r\n}"],"names":[],"sourceRoot":""}
