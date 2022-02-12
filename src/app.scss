@@ -1,13 +1,15 @@
+@import './global.scss';
+
 .app {
     height: 100vh;
 
     .sections {
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - $topBarHeight);
         background-color: lightsalmon;
         overflow-x: hidden;                 // Keeps vertical scroll bar beneath the top bar and allows snapping to work
         position: relative;
-        top: 70px;
+        top: $topBarHeight;
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
         scroll-behavior: smooth;
