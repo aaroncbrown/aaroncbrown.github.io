@@ -27,7 +27,7 @@ export default function Intro(): JSX.Element {
   return (
     <div id='intro' className='intro'>
         {getIntroBackground(aspectRatio)}
-        <div className={'intro-text' + (aspectRatio < 1 ? ' portrait' : '')}>
+        <div className={'intro-text' + (aspectRatio < 1.3 ? ' portrait' : '')}>
           <span>Hello, I'm</span>
           <span><span className='first-name'>Aaron</span> <span className='last-name'>Brown</span></span>
           <span>Software Developer</span>
