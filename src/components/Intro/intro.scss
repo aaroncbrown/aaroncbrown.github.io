@@ -6,10 +6,24 @@
 
     .intro-text {
         position: absolute;
+        display: flex;
+        flex-direction: column;
         color: white;
-        right: 10%;
+        right: 20%;
         top: 20%;
-        font-size: 80px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+        :first-child {
+            font-size: 80px;
+        }
+
+        :nth-child(2) {
+            font-size: 100px;
+        }
+
+        :last-child {
+            font-size: 50px;
+        }
     }
 
     a {

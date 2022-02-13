@@ -22,6 +22,11 @@ export default function Intro(): JSX.Element {
   return (
     <div id='intro' className='intro'>
         {getIntroBackground()}
+        <div className="intro-text">
+          <span>Hello, I'm</span>
+          <span>Aaron Brown</span>
+          <span>Software Developer</span>
+        </div>
         <a href='#portfolio'>
           <img src='images/down-arrow.png' alt='down arrow' />
         </a>
