@@ -1,12 +1,10 @@
 import './intro.scss';
 
-function getIntroBackground(): JSX.Element {
-  if (window.screen.width <= window.screen.height) {
+function getIntroBackground(aspectRatio: number): JSX.Element {
+  if (aspectRatio <= 1) {
     // Portrait mode (i.e. smart phones).
     return <img src='images/angels-landing-summit-3024x3024.jpg' alt="Angel's Landing Summit Portrait" className='intro-picture' />;
   }
-
-  const aspectRatio = window.screen.width / window.screen.height;
 
   // Add 2 to numerator of 1920 by 1080 to allow for strange decimal behavior.
   if (aspectRatio <= (1922 / 1080)) {
@@ -19,12 +17,14 @@ function getIntroBackground(): JSX.Element {
 }
 
 export default function Intro(): JSX.Element {
+  const aspectRatio = window.screen.width / window.screen.height;
+
   return (
     <div id='intro' className='intro'>
-        {getIntroBackground()}
-        <div className="intro-text">
+        {getIntroBackground(aspectRatio)}
+        <div className={'intro-text' + (aspectRatio < 1 ? ' portrait' : '')}>
           <span>Hello, I'm</span>
-          <span>Aaron Brown</span>
+          <span><span className='first-name'>Aaron</span> <span className='last-name'>Brown</span></span>
           <span>Software Developer</span>
         </div>
         <a href='#portfolio'>
