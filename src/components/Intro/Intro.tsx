@@ -1,5 +1,10 @@
 import './intro.scss';
 
+/**
+ * Gets the intro background based on the aspect ratio.
+ * @param aspectRatio the ration of screen width to screen height.
+ * @returns The intro background as a JSX.Element.
+ */
 function getIntroBackground(aspectRatio: number): JSX.Element {
   if (aspectRatio <= 1) {
     // Portrait mode (i.e. smart phones).
