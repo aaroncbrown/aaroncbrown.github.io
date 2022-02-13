@@ -9,7 +9,7 @@ import './app.scss';
 import { useState } from 'react';
 
 function App(): JSX.Element {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="app">
