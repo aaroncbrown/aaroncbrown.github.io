@@ -3,6 +3,10 @@
 .intro {
     background-color: lightgrey;
     display: flex;
+    
+    .intro-picture {
+        width: 100%;
+    }
 
     .intro-text {
         position: absolute;
