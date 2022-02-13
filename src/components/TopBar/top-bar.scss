@@ -11,7 +11,10 @@
     transition: all 1s ease;
 
     .wrapper {
-        padding: 10px 30px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 30px;
+        padding-left: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -21,11 +24,13 @@
             align-items: center;
 
             .logo {
-                font-size: 40px;
-                font-weight: 700;
                 text-decoration: none;
                 color: inherit;
-                margin-right: 40px;
+
+                .logo-image {
+                    height: 50px;
+                    width: 50px;
+                }
             }
 
             .itemContainer {

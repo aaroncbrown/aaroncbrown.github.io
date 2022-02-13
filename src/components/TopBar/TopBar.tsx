@@ -1,6 +1,5 @@
 import './top-bar.scss'
 import MailIcon from '@mui/icons-material/Mail';
-import PersonIcon from '@mui/icons-material/Person';
 import { Dispatch, SetStateAction } from 'react';
 
 interface TopBarParams {
@@ -13,11 +12,9 @@ export default function TopBar({ menuOpen, setMenuOpen }: TopBarParams): JSX.Ele
     <div className={'top-bar' + (menuOpen ? ' active' : '')}>
       <div className='wrapper'>
         <div className='left'>
-          <a href='#intro' className='logo'>genius.</a>
-          <div className="itemContainer">
-            <PersonIcon className='icon' />
-            <span>Aaron Brown</span>
-          </div>
+          <a href='#intro' className='logo'>
+            <img src='images/logo512.png' alt="Aaron's site logo." className='logo-image' />
+          </a>
           <div className="itemContainer">
             <MailIcon className='icon' />
             <span>aaroncbrown@gmail.com</span>
