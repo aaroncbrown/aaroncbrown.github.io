@@ -23,8 +23,7 @@ export default function TopBar({ menuOpen, setMenuOpen }: TopBarParams): JSX.Ele
           <div className='itemContainer'>
             <LinkedInIcon className='icon' />
             <a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/aaron-brown-305036a1/'>LinkedIn Profile</a>
-          </div>
-          
+          </div>    
         </div>
         <div className='right'>
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
