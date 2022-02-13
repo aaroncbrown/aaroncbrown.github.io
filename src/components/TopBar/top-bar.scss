@@ -27,35 +27,47 @@
                 text-decoration: none;
                 color: inherit;
 
-                .logo-image {
+                img {
                     height: 50px;
                     width: 50px;
+
+                    // Anchor adds 4px to the bottom, position: relative and top: 2px centers the logo.
+                    position: relative;
+                    top: 2px;
                 }
             }
 
-            .itemContainer {
+            .item-container-wrapper {
                 display: flex;
-                align-items: center;
-                margin-left: 30px;
 
-                .icon {
-                    font-size: 18px;
-                    margin-right: 5px;
+                &.display-none {
+                    display: none;
                 }
 
-                span {
-                    font-size: 15px;
-                    font-weight: 500;
-                }
-
-                a {
-                    text-decoration: none;
-                    font-size: 15px;
-                    font-weight: 500;
-                    color: inherit;
-
-                    &:active {
+                .item-container {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 30px;
+    
+                    .icon {
+                        font-size: 18px;
+                        margin-right: 5px;
+                    }
+    
+                    span {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+    
+                    a {
+                        text-decoration: none;
+                        font-size: 15px;
+                        font-weight: 500;
                         color: inherit;
+    
+                        &:active {
+                            color: inherit;
+                        }
                     }
                 }
             }
