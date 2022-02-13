@@ -15,10 +15,12 @@
 
         > span:first-child {
             font-size: 80px;
+            animation: fade-in-with-delay 3s;
         }
 
         > span:nth-child(2) {
             font-size: 100px;
+            animation: fade-in-with-delay 4s;
 
             .first-name {
                 color: lightgreen;
@@ -30,6 +32,7 @@
         }
 
         > span:last-child {
+            animation: fade-in-with-delay 5s;
             font-size: 55px;
             margin-top: 10px;
         }
@@ -62,13 +65,8 @@
 
         img {
             width: 70px;
-            animation: arrowBlink 2s infinite;
-        }
-
-        @keyframes arrowBlink {
-            100% {
-                opacity: 0;
-            }
+            opacity: 0;
+            animation: fade-in-fade-out 2s infinite 3.5s;
         }
     }
 }

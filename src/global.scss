@@ -2,3 +2,15 @@ $mainColor: #15023a;
 $topBarZIndex: 3;
 $menuZIndex: 2;
 $topBarHeight: 70px;
+
+@keyframes fade-in-with-delay {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-in-fade-out {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
