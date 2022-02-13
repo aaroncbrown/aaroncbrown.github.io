@@ -27,8 +27,8 @@ export default function Intro(): JSX.Element {
           <span><span className='first-name'>Aaron</span> <span className='last-name'>Brown</span></span>
           <span>Software Developer</span>
         </div>
-        <a href='#portfolio'>
-          <img src='images/down-arrow.png' alt='down arrow' />
+        <a href='#portfolio' className={aspectRatio <= .6 ? 'portrait-down-arrow' : ''}>
+          <img src='images/black-down-arrow.png' alt='blackdown arrow' />
         </a>
     </div>
   )

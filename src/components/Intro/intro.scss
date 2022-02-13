@@ -33,7 +33,7 @@
 
         > span:last-child {
             animation: fade-in-with-delay 5s;
-            font-size: 55px;
+            font-size: 49px;
             margin-top: 10px;
         }
 
@@ -59,9 +59,13 @@
 
     a {
         position: absolute;
-        bottom: 25px;
+        bottom: 0px;
         left: calc(50% - 35px);
         z-index: 2;
+
+        &.portrait-down-arrow {
+            left: calc(90% - 35px);
+        }
 
         img {
             width: 70px;
