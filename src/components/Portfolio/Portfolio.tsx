@@ -1,15 +1,40 @@
 import './portfolio.scss';
+import PortfolioListItem from '../PortfolioListItem/PortfolioListItem';
+import { useState } from 'react';
 
 export default function Portfolio(): JSX.Element {
+  const [selected, setSelected] = useState('featured');
+
+  const list = [
+    {
+      id: 'featured',
+      title: 'Featured',
+    },
+    {
+      id: 'web',
+      title: 'Web App',
+    },
+    {
+      id: 'mobile',
+      title: 'Mobile App',
+    },
+    {
+      id: 'design',
+      title: 'Design',
+    },
+    {
+      id: 'content',
+      title: 'Content',
+    },
+  ];
+
   return (
     <div id='portfolio' className='portfolio'>
       <div className='section-title'>Portfolio</div>
       <ul>
-        <li className='active'>Featured</li>
-        <li>Web App</li>
-        <li>Mobile App</li>
-        <li>Design</li>
-        <li>Branding</li>
+        {list.map(item => (
+          <PortfolioListItem title={item.title} active={selected === item.id} onClick={() => setSelected(item.id)}/>
+        ))}
       </ul>
       <div className='container'>
         <div className='item'>

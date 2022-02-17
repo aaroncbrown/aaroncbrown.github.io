@@ -1,18 +1,17 @@
 import './top-bar.scss'
 import MailIcon from '@mui/icons-material/Mail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Dispatch, SetStateAction } from 'react';
 
 interface TopBarParams {
   menuOpen: boolean;
-  setMenuOpen: Dispatch<SetStateAction<boolean>>;
+  onHamburgerClick: React.MouseEventHandler<HTMLDivElement> | undefined;
 }
 
-export default function TopBar({ menuOpen, setMenuOpen }: TopBarParams): JSX.Element {
+export default function TopBar(params: TopBarParams): JSX.Element {
   const aspectRatio = window.screen.width / window.screen.height;
 
   return (
-    <div className={'top-bar' + (menuOpen ? ' active' : '')}>
+    <div className={'top-bar' + (params.menuOpen ? ' active' : '')}>
       <div className='wrapper'>
         <div className='left'>
           <a href='#intro' className='logo'>
@@ -30,7 +29,7 @@ export default function TopBar({ menuOpen, setMenuOpen }: TopBarParams): JSX.Ele
           </div> 
         </div>
         <div className='right'>
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <div className="hamburger" onClick={params.onHamburgerClick}>
             <span className='line1'></span>
             <span className='line2'></span>
             <span className='line3'></span>

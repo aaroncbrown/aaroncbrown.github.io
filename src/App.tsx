@@ -13,8 +13,8 @@ function App(): JSX.Element {
 
   return (
     <div className="app">
-      <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <TopBar menuOpen={menuOpen} onHamburgerClick={() => setMenuOpen(!menuOpen)} />
+      <Menu menuOpen={menuOpen} onMenuItemClick={() => setMenuOpen(false)} />
       <div className="sections">
         <Intro />
         <Portfolio />
