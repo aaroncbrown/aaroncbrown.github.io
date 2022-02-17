@@ -22,7 +22,7 @@ function getIntroBackground(aspectRatio: number): JSX.Element {
 }
 
 export default function Intro(): JSX.Element {
-  const aspectRatio = window.innerWidth / window.innerHeight;
+  const aspectRatio = window.screen.width / window.screen.height;
 
   return (
     <div id='intro' className='intro'>
