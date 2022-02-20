@@ -1,10 +1,12 @@
 import './portfolio.scss';
 import PortfolioSectionSelectionItem from '../PortfolioSectionSelectionItem/PortfolioSectionSelectionItem';
 import PortfolioItem from '../PortfolioItem/PortfolioItem';
-import { useState } from 'react';
+import { personalPortfolioSectionData, SectionData, workPortfolioSectionData } from './portfolioSectionData';
+import { useEffect, useState } from 'react';
 
 export default function Portfolio(): JSX.Element {
   const [selectedSection, setSelectedSection] = useState('work');
+  const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
   const list = [
     {
@@ -17,6 +19,20 @@ export default function Portfolio(): JSX.Element {
     }
   ];
 
+  useEffect(() => {
+    switch(selectedSection) {
+      case 'work':
+        setSectionData(workPortfolioSectionData);
+        break;
+      case 'personal':
+        setSectionData(personalPortfolioSectionData);
+        break;
+      default:
+        setSectionData([]);
+        break;
+    }
+  }, [selectedSection]);
+
   return (
     <div id='portfolio' className='portfolio'>
       <div className='section-title'>Portfolio</div>
@@ -26,7 +42,9 @@ export default function Portfolio(): JSX.Element {
         ))}
       </ul>
       <div className='container'>
-        <PortfolioItem title='Skylight Virtual Agent' imageSrc='images/skylight-virtual-agent.png' imageAlt='Skylight Virtual Agent' />
+        {sectionData.map(data => (
+          <PortfolioItem title={data.title} imageSrc={data.imageSrc} imageAlt={data.imageAlt} onClick={() => window.open(data.site, '_blank')} />
+        ))}
       </div>
     </div>
   )
