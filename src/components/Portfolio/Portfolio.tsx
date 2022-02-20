@@ -27,11 +27,6 @@ export default function Portfolio(): JSX.Element {
       </ul>
       <div className='container'>
         <PortfolioItem title='Skylight Virtual Agent' imageSrc='images/skylight-virtual-agent.png' imageAlt='Skylight Virtual Agent' />
-        <PortfolioItem title='Skylight Virtual Agent' imageSrc='images/skylight-virtual-agent.png' imageAlt='Skylight Virtual Agent' />
-        <PortfolioItem title='Skylight Virtual Agent' imageSrc='images/skylight-virtual-agent.png' imageAlt='Skylight Virtual Agent' />
-        <PortfolioItem title='Skylight Virtual Agent' imageSrc='images/skylight-virtual-agent.png' imageAlt='Skylight Virtual Agent' />
-        <PortfolioItem title='Skylight Virtual Agent' imageSrc='images/skylight-virtual-agent.png' imageAlt='Skylight Virtual Agent' />
-        <PortfolioItem title='Skylight Virtual Agent' imageSrc='images/skylight-virtual-agent.png' imageAlt='Skylight Virtual Agent' />
       </div>
     </div>
   )
