@@ -2,22 +2,12 @@ import './portfolio.scss';
 import PortfolioSectionSelectionItem from '../PortfolioSectionSelectionItem/PortfolioSectionSelectionItem';
 import PortfolioItem from '../PortfolioItem/PortfolioItem';
 import { personalPortfolioSectionData, SectionData, workPortfolioSectionData } from './portfolioSectionData';
+import portfolioSectionSelectionItemData from './portfolioSectionSelectionItemData';
 import { useEffect, useState } from 'react';
 
 export default function Portfolio(): JSX.Element {
   const [selectedSection, setSelectedSection] = useState('work');
   const [sectionData, setSectionData] = useState<SectionData[]>([]);
-
-  const list = [
-    {
-      id: 'work',
-      title: 'Work',
-    },
-    {
-      id: 'personal',
-      title: 'Personal',
-    }
-  ];
 
   useEffect(() => {
     switch(selectedSection) {
@@ -37,7 +27,7 @@ export default function Portfolio(): JSX.Element {
     <div id='portfolio' className='portfolio'>
       <div className='section-title'>Portfolio</div>
       <ul>
-        {list.map(item => (
+        {portfolioSectionSelectionItemData.map(item => (
           <PortfolioSectionSelectionItem key={item.id} title={item.title} active={selectedSection === item.id} onClick={() => setSelectedSection(item.id)}/>
         ))}
       </ul>
