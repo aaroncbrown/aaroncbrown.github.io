@@ -4,7 +4,7 @@ import PortfolioItem from '../PortfolioItem/PortfolioItem';
 import { useState } from 'react';
 
 export default function Portfolio(): JSX.Element {
-  const [selected, setSelected] = useState('work');
+  const [selectedSection, setSelectedSection] = useState('work');
 
   const list = [
     {
@@ -22,7 +22,7 @@ export default function Portfolio(): JSX.Element {
       <div className='section-title'>Portfolio</div>
       <ul>
         {list.map(item => (
-          <PortfolioSectionSelectionItem key={item.id} title={item.title} active={selected === item.id} onClick={() => setSelected(item.id)}/>
+          <PortfolioSectionSelectionItem key={item.id} title={item.title} active={selectedSection === item.id} onClick={() => setSelectedSection(item.id)}/>
         ))}
       </ul>
       <div className='container'>
