@@ -1,13 +1,13 @@
 import React from 'react'
-import './portfolio-list-item.scss'
+import './portfolio-section-selection-item.scss'
 
-interface PortfolioListItemParams {
+interface PortfolioSectionSelectionItemParams {
   title: string;
   active: boolean;
   onClick: React.MouseEventHandler<HTMLLIElement> | undefined;
 }
 
-export default function PortfolioListItem(params: PortfolioListItemParams) {
+export default function PortfolioSectionSelectionItem(params: PortfolioSectionSelectionItemParams) {
   return (
     <li className={'portfolio-list-item' + (params.active ? ' active' : '')} onClick={params.onClick}>
         {params.title}
