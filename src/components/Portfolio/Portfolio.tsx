@@ -33,7 +33,7 @@ export default function Portfolio(): JSX.Element {
       </ul>
       <div className='container'>
         {sectionData.map(data => (
-          <PortfolioItem title={data.title} imageSrc={data.imageSrc} imageAlt={data.imageAlt} onClick={() => window.open(data.site, '_blank')} />
+          <PortfolioItem key={data.title} title={data.title} imageSrc={data.imageSrc} imageAlt={data.imageAlt} onClick={() => window.open(data.site, '_blank')} />
         ))}
       </div>
     </div>
