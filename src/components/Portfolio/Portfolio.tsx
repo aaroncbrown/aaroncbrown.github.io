@@ -1,19 +1,16 @@
 import './portfolio.scss';
 import PortfolioSectionSelectionItem from '../PortfolioSectionSelectionItem/PortfolioSectionSelectionItem';
 import PortfolioItem from '../PortfolioItem/PortfolioItem';
-import { personalPortfolioSectionData, SectionData, workPortfolioSectionData } from './portfolioSectionData';
+import { personalPortfolioSectionData, SectionData } from './portfolioSectionData';
 import portfolioSectionSelectionItemData from './portfolioSectionSelectionItemData';
 import { useEffect, useState } from 'react';
 
 export default function Portfolio(): JSX.Element {
-  const [selectedSection, setSelectedSection] = useState('work');
+  const [selectedSection, setSelectedSection] = useState('personal');
   const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
   useEffect(() => {
     switch(selectedSection) {
-      case 'work':
-        setSectionData(workPortfolioSectionData);
-        break;
       case 'personal':
         setSectionData(personalPortfolioSectionData);
         break;

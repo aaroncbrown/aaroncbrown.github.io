@@ -5,10 +5,6 @@ interface PortfolioSectionSelectionItemData {
 
 const portfolioSectionSelectionItemData: PortfolioSectionSelectionItemData[] = [
   {
-    id: 'work',
-    title: 'Work',
-  },
-  {
     id: 'personal',
     title: 'Personal',
   }
